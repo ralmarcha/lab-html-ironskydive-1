@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IronSkydive</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <nav class="nav-bar">
-      <ul>
-        <li><a href="#structure">Day Structure</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#schedule">Schedule</a></li>
+      <ul class="nav-bar-ul">
+        <li><a class="nav-bar-item" href="#structure">Day Structure</a></li>
+        <li><a class="nav-bar-item" href="#team">Team</a></li>
+        <li><a class="nav-bar-item" href="#schedule">Schedule</a></li>
       </ul>
     </nav>
 
@@ -33,12 +32,14 @@
     </header>
     <!-- section1 -->
     <section id="general-information" class="dark-background">
-      <article>
+      <article class="container">
         <h3>Hello!</h3>
-        <p class="text">Welcome to IronSkydive, the best adventure you will ever have.</p>
+        <p class="text">
+          Welcome to IronSkydive, the best adventure you will ever have.
+        </p>
         <a class="link-btn" href="#">Learn More</a>
       </article>
-      <article>
+      <article class="container">
         <h3>About us</h3>
         <p class="text">
           We like a lot programming websites, but we also love to practice
@@ -46,14 +47,16 @@
         </p>
         <a class="link-btn" href="#">Watch Video</a>
       </article>
-      <article>
+      <article class="container">
         <h3>Wanna join?</h3>
-        <p class="text">Join our fitness program to be in good shape while learning.</p>
+        <p class="text">
+          Join our fitness program to be in good shape while learning.
+        </p>
         <a class="link-btn" href="#">Register</a>
       </article>
     </section>
     <!-- section2 -->
-    <section id="structure">
+    <section id="structure" class="container">
       <h3>How do we structure the day?</h3>
       <div>
         <article class="service-box">
@@ -134,7 +137,7 @@
     <!-- section4 -->
     <section id="schedule">
       <h3>Schedule</h3>
-      <table>
+      <table class="schedule-table" cellpadding="0" cellspacing="0">
         <tbody>
           <tr>
             <th>Time</th>
@@ -175,7 +178,37 @@
         </tbody>
       </table>
       <h3>Schedule a Time Slot</h3>
+      <form class="slot-form" action="/register" method="post">
+        <div class="slot-form-container">
+          <label> Email </label>
+          <input type="email" placeholder="Enter your email" />
+        </div>
+
+        <div class="slot-form-container">
+          <label> Participants </label>
+          <input type="Number" placeholder="Number of participants" />
+        </div>
+
+        <div class="slot-form-container">
+          <label> Date </label>
+          <input type="date" />
+        </div>
+
+        <div class="slot-form-container">
+          <label> Time </label>
+          <select>
+            <option value="early">9:00 - 11:00</option>
+            <option value="mid">12:00 - 14:00</option>
+            <option value="late">15:00 - 17:00</option>
+          </select>
+        </div>
+
+        <div class="slot-form-container">
+          <button type="submit">Reserve Your Slot!</button>
+        </div>
+      </form>
     </section>
+
     <footer class="dark-background footer">
       <section>
         <h5>Contact Information</h5>
@@ -186,13 +219,20 @@
           France <br />
           +33 (0) 619 193 088
         </address>
-        <h5> Follow Us</h5>
-          <ul>
-            <li><a href="#" target="_blank"> Twitter </a></li>
-            <li><a href="#" target="_blank"> Facebook </a></li>
-            <li><a href="#" target="_blank"> Instagram </a></li>
-          </ul>
+        <h5>Follow Us</h5>
+        <ul>
+          <li><a href="#" target="_blank"> Twitter </a></li>
+          <li><a href="#" target="_blank"> Facebook </a></li>
+          <li><a href="#" target="_blank"> Instagram </a></li>
+        </ul>
       </section>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.142047744348!2d2.3354330160472316!3d48.87456857928921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e38f817b573%3A0x48d69c30470e7aeb!2sIronhack!5e0!3m2!1sen!2ses!4v1495208746099"
+        class="map-frame"
+        frameborder="0"
+        style="border: 0"
+        allowfullscreen
+      ></iframe>
     </footer>
   </body>
 </html>
